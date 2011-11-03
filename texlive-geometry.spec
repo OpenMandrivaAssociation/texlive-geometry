@@ -1,3 +1,9 @@
+# revision 19716
+# category Package
+# catalog-ctan /macros/latex/contrib/geometry
+# catalog-date 2010-09-13 00:36:13 +0200
+# catalog-license lppl
+# catalog-version 5.6
 Name:		texlive-geometry
 Version:	5.6
 Release:	1
@@ -57,6 +63,7 @@ direct interaction with PDF(La)TeX).
 %doc %{_texmfdistdir}/source/latex/geometry/geometry.drv
 %doc %{_texmfdistdir}/source/latex/geometry/geometry.dtx
 %doc %{_texmfdistdir}/source/latex/geometry/geometry.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -67,3 +74,5 @@ direct interaction with PDF(La)TeX).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
