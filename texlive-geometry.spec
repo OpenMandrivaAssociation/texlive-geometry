@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version 5.6
 Name:		texlive-geometry
-Version:	5.6
-Release:	10
+Version:	5.7
+Release:	1
 Summary:	Flexible and complete interface to document dimensions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/geometry
