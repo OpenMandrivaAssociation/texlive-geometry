@@ -1,19 +1,13 @@
-# revision 19716
-# category Package
-# catalog-ctan /macros/latex/contrib/geometry
-# catalog-date 2010-09-13 00:36:13 +0200
-# catalog-license lppl
-# catalog-version 5.6
 Name:		texlive-geometry
-Version:	5.7
-Release:	2
+Version:	61719
+Release:	1
 Summary:	Flexible and complete interface to document dimensions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/geometry
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/geometry.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/geometry.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/geometry.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/geometry.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/geometry.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/geometry.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -34,46 +28,27 @@ it's set up to the output (whether via DVI \specials or via
 direct interaction with PDF(La)TeX).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/geometry/geometry.sty
-%doc %{_texmfdistdir}/doc/latex/geometry/README
-%doc %{_texmfdistdir}/doc/latex/geometry/changes.txt
-%doc %{_texmfdistdir}/doc/latex/geometry/geometry-samples.tex
-%doc %{_texmfdistdir}/doc/latex/geometry/geometry.cfg
-%doc %{_texmfdistdir}/doc/latex/geometry/geometry.pdf
+%{_texmfdistdir}/tex/latex/geometry
+%doc %{_texmfdistdir}/doc/latex/geometry
 #- source
-%doc %{_texmfdistdir}/source/latex/geometry/geometry.drv
-%doc %{_texmfdistdir}/source/latex/geometry/geometry.dtx
-%doc %{_texmfdistdir}/source/latex/geometry/geometry.ins
+%doc %{_texmfdistdir}/source/latex/geometry
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 5.6-2
-+ Revision: 752259
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 5.6-1
-+ Revision: 718535
-- texlive-geometry
-- texlive-geometry
-- texlive-geometry
-- texlive-geometry
-
