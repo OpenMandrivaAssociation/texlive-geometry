@@ -1,6 +1,6 @@
 Name:		texlive-geometry
 Version:	61719
-Release:	1
+Release:	2
 Summary:	Flexible and complete interface to document dimensions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/geometry
