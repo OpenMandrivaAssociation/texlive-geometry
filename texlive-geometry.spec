@@ -3,7 +3,7 @@ Version:	61719
 Release:	2
 Summary:	Flexible and complete interface to document dimensions
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/geometry
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/geometry
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/geometry.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/geometry.doc.r%{version}.tar.xz
