@@ -14,8 +14,6 @@ Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/geometry.doc.r%{
 Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/geometry.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-BuildRequires:	texlive-tlpkg
-%texlive_base_requires
 Requires:	texlive(graphics)
 Requires:	texlive(iftex)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
